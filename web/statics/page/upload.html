@@ -1,5 +1,5 @@
 <!--<link rel="stylesheet" href="../lib/layui-v2.5.5/css/layui.css" media="all">-->
-<link rel="stylesheet" href="lib/jq-module/zyupload/zyupload-1.0.0.min.css" media="all">
+<link rel="stylesheet" href="statics/lib/jq-module/zyupload/zyupload-1.0.0.min.css" media="all">
 <div class="layuimini-container layuimini-page-anim">
     <div class="layuimini-main">
         <blockquote class="layui-elem-quote">
@@ -14,7 +14,7 @@
             height: "400px",                 // 宽度
             itemWidth: "140px",                 // 文件项的宽度
             itemHeight: "115px",                 // 文件项的高度
-            url: "api/upload",  // 上传文件的路径
+            url: "statics/api/upload",  // 上传文件的路径
             fileType: ["jpg", "png", "txt", "js", "exe"],// 上传文件的类型
             fileSize: 51200000,                // 上传文件的大小
             multiple: true,                    // 是否可以多个文件上传
@@ -50,8 +50,8 @@
         </pre>
     </div>
 </div>
-<script src="lib/jquery-3.4.1/jquery-3.4.1.min.js" charset="utf-8"></script>
-<script src="lib/jq-module/zyupload/zyupload-1.0.0.min.js" charset="utf-8"></script>
+<script src="statics/lib/jquery-3.4.1/jquery-3.4.1.min.js" charset="utf-8"></script>
+<script src="statics/lib/jq-module/zyupload/zyupload-1.0.0.min.js" charset="utf-8"></script>
 <script type="text/javascript">
     $(function () {
         // 初始化插件
@@ -60,7 +60,7 @@
             height: "400px",                 // 宽度
             itemWidth: "140px",                 // 文件项的宽度
             itemHeight: "115px",                 // 文件项的高度
-            url: "api/upload",  // 上传文件的路径
+            url: "statics/api/upload",  // 上传文件的路径
             fileType: ["jpg", "png", "txt", "js", "exe"],// 上传文件的类型
             fileSize: 51200000,                // 上传文件的大小
             multiple: true,                    // 是否可以多个文件上传

@@ -16,7 +16,7 @@ RUN mkdir publish && cp transfer publish && \
 FROM alpine
 
 WORKDIR /app
-
+COPY web/statics /app/statics
 COPY --from=compiler /app/publish .
 
 # 注意修改端口

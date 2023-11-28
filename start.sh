@@ -1,0 +1,1 @@
+ docker stop go-mysql-transfer;docker build -t go-mysql-transfer .;docker run -itd --name go-mysql-transfer --rm -p 8060:8060  go-mysql-transfer|xargs dockerlogs
