@@ -88,8 +88,35 @@ rule:
     #lua_script:   #lua 脚本
     value_encoder: json  #值编码，支持json、kv-commas、v-commas；默认为json
     #value_formatter: '{{.ID}}|{{.USER_NAME}}' # 值格式化表达式，如：{{.ID}}|{{.USER_NAME}},{{.ID}}表示ID字段的值、{{.USER_NAME}}表示USER_NAME字段的值
-  -  
-    schema: yd #数据库名称
+    #mongodb相关
+    mongodb_database: yd #mongodb database不能为空
+#    mongodb_collection: t_collection #mongodb collection，可以为空，默认使用表名称
+
+    #elasticsearch相关
+    #es_index: user_index #Index名称,可以为空，默认使用表(Table)名称
+    #es_mappings: #索引映射，可以为空，为空时根据数据类型自行推导ES推导
+    #  -
+    #    column: REMARK #数据库列名称
+    #    field: remark #映射后的ES字段名称
+    #    type: text #ES字段类型
+    #    analyzer: ik_smart #ES分词器，type为text此项有意义
+    #    #format: #日期格式，type为date此项有意义
+    #  -
+    #    column: USER_NAME #数据库列名称
+    #    field: account #映射后的ES字段名称
+    #    type: keyword #ES字段类型
+
+    #rocketmq相关
+    #rocketmq_topic: transfer_test_topic #rocketmq topic，可以为空，默认使用表名称
+
+    #kafka相关
+    #kafka_topic: user_topic #rocketmq topic，可以为空，默认使用表名称
+
+    #rabbitmq相关
+    #rabbitmq_queue: user_topic #queue名称,可以为空，默认使用表(Table)名称
+
+    #reserve_raw_data: true #保留update之前的数据，针对rocketmq、kafka、rabbitmq有用;默认为false
+  - schema: yd #数据库名称
     table: t_payment #表名称
     #order_by_column: id #排序字段，存量数据同步时不能为空
     #column_lower_case:false #列名称转为小写,默认为false
@@ -106,19 +133,9 @@ rule:
     #lua_script:   #lua 脚本
     value_encoder: json  #值编码，支持json、kv-commas、v-commas；默认为json
     #value_formatter: '{{.ID}}|{{.USER_NAME}}' # 值格式化表达式，如：{{.ID}}|{{.USER_NAME}},{{.ID}}表示ID字段的值、{{.USER_NAME}}表示USER_NAME字段的值
-    #redis相关
-    #redis_structure: string # 数据类型。 支持string、hash、list、set、sortedset类型(与redis的数据类型一致)
-    #redis_key_prefix: USER_ #key的前缀
-    #redis_key_column: USER_NAME #使用哪个列的值作为key，不填写默认使用主键
-    #redis_key_formatter: '{{.ID}}|{{.USER_NAME}}'
-    #redis_key_value: user #KEY的值（固定值）；当redis_structure为hash、list、set、sortedset此值不能为空
-    #redis_hash_field_prefix: _CARD_ #hash的field前缀，仅redis_structure为hash时起作用
-    #redis_hash_field_column: Cert_No #使用哪个列的值作为hash的field，仅redis_structure为hash时起作用，不填写默认使用主键
-    #redis_sorted_set_score_column: id #sortedset的score，当数据类型为sortedset时，此项不能为空，此项的值应为数字类型
-
     #mongodb相关
-    #mongodb_database: transfer #mongodb database不能为空
-    #mongodb_collection: transfer_test_topic #mongodb collection，可以为空，默认使用表名称
+    mongodb_database: yd #mongodb database不能为空
+    #    mongodb_collection: t_collection #mongodb collection，可以为空，默认使用表名称
 
     #elasticsearch相关
     #es_index: user_index #Index名称,可以为空，默认使用表(Table)名称
