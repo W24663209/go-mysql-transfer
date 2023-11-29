@@ -82,8 +82,8 @@ rule:
     #exclude_columns: BIRTHDAY,MOBIE # 排除掉的列，多值逗号分隔，如：id,name,age,area_id  默认为空
     #column_mappings: USER_NAME=account    #列名称映射，多个映射关系用逗号分隔，如：USER_NAME=account 表示将字段名USER_NAME映射为account
     #default_column_values: area_name=合肥  #默认的列-值，多个用逗号分隔，如：source=binlog,area_name=合肥
-    #date_formatter: yyyy-MM-dd #date类型格式化， 不填写默认yyyy-MM-dd
-    #datetime_formatter: yyyy-MM-dd HH:mm:ss #datetime、timestamp类型格式化，不填写默认yyyy-MM-dd HH:mm:ss
+    date_formatter: yyyy-MM-dd #date类型格式化， 不填写默认yyyy-MM-dd
+    datetime_formatter: yyyy-MM-dd HH:mm:ss #datetime、timestamp类型格式化，不填写默认yyyy-MM-dd HH:mm:ss
     #lua_file_path: lua/t_user.lua   #lua脚本文件
     #lua_script:   #lua 脚本
     value_encoder: json  #值编码，支持json、kv-commas、v-commas；默认为json
@@ -127,8 +127,8 @@ rule:
     #exclude_columns: BIRTHDAY,MOBIE # 排除掉的列，多值逗号分隔，如：id,name,age,area_id  默认为空
     #column_mappings: USER_NAME=account    #列名称映射，多个映射关系用逗号分隔，如：USER_NAME=account 表示将字段名USER_NAME映射为account
     #default_column_values: area_name=合肥  #默认的列-值，多个用逗号分隔，如：source=binlog,area_name=合肥
-    #date_formatter: yyyy-MM-dd #date类型格式化， 不填写默认yyyy-MM-dd
-    #datetime_formatter: yyyy-MM-dd HH:mm:ss #datetime、timestamp类型格式化，不填写默认yyyy-MM-dd HH:mm:ss
+    date_formatter: yyyy-MM-dd #date类型格式化， 不填写默认yyyy-MM-dd
+    datetime_formatter: yyyy-MM-dd HH:mm:ss #datetime、timestamp类型格式化，不填写默认yyyy-MM-dd HH:mm:ss
     #lua_file_path: lua/t_user.lua   #lua脚本文件
     #lua_script:   #lua 脚本
     value_encoder: json  #值编码，支持json、kv-commas、v-commas；默认为json
