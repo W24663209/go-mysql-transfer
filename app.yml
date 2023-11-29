@@ -76,7 +76,7 @@ rule:
     #order_by_column: id #排序字段，存量数据同步时不能为空
     #column_lower_case:false #列名称转为小写,默认为false
     #column_upper_case:false#列名称转为大写,默认为false
-    column_underscore_to_camel: true #列名称下划线转驼峰,默认为false
+    column_underscore_to_camel: false #列名称下划线转驼峰,默认为false
     # 包含的列，多值逗号分隔，如：id,name,age,area_id  为空时表示包含全部列
     #include_columns: ID,USER_NAME,PASSWORD
     #exclude_columns: BIRTHDAY,MOBIE # 排除掉的列，多值逗号分隔，如：id,name,age,area_id  默认为空
@@ -121,7 +121,7 @@ rule:
     #order_by_column: id #排序字段，存量数据同步时不能为空
     #column_lower_case:false #列名称转为小写,默认为false
     #column_upper_case:false#列名称转为大写,默认为false
-    column_underscore_to_camel: true #列名称下划线转驼峰,默认为false
+    column_underscore_to_camel: false #列名称下划线转驼峰,默认为false
     # 包含的列，多值逗号分隔，如：id,name,age,area_id  为空时表示包含全部列
     #include_columns: ID,USER_NAME,PASSWORD
     #exclude_columns: BIRTHDAY,MOBIE # 排除掉的列，多值逗号分隔，如：id,name,age,area_id  默认为空
