@@ -1,5 +1,5 @@
 # mysql配置
-addr: mysql:17536
+addr: mysql:3306
 user: root
 pass: 123456
 charset : utf8

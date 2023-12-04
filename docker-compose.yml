@@ -5,7 +5,8 @@ services:
     build: .
     container_name: go-mysql-transfer
     restart: always
-
+    networks:
+      - proxynet
 networks:
   proxynet:
     name: yd_network
