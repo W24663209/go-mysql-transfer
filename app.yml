@@ -1,5 +1,5 @@
 # mysql配置
-addr: monorail.proxy.rlwy.net:17536
+addr: mysql:17536
 user: root
 pass: 123456
 charset : utf8
@@ -43,9 +43,9 @@ target: mongodb # 支持redis、mongodb、elasticsearch、rocketmq、kafka、rab
 #redis_database: 0  #redis数据库 0-16,默认0。如果group_type为cluster此项无效
 
 #mongodb连接配置
-mongodb_addrs: viaduct.proxy.rlwy.net:46510 #mongodb连接地址，多个用逗号分隔
-mongodb_username: mongo #mongodb用户名，默认为空
-mongodb_password: aHAfh-dh5b1A1g35d1HEdb43F61H6C4h #mongodb密码，默认为空
+mongodb_addrs: mongo:27017 #mongodb连接地址，多个用逗号分隔
+mongodb_username: root #mongodb用户名，默认为空
+mongodb_password: 123456 #mongodb密码，默认为空
 
 #elasticsearch连接配置
 #es_addrs: 127.0.0.1:9200 #连接地址，多个用逗号分隔
