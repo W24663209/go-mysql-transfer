@@ -1,0 +1,13 @@
+version: '3.1'
+services:
+  go-mysql-transfer:
+    build: .
+    container_name: go-mysql-transfer
+    restart: always
+    volumes:
+      - /usr/share/zoneinfo/Asia/Kolkata:/etc/localtime
+    networks:
+      - proxynet
+networks:
+  proxynet:
+    name: yd_network
